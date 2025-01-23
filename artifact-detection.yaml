@@ -1,0 +1,37 @@
+name: Artifact detection
+name_short: artifact_detection
+version: 1.0.0
+namespace: diagnijmegen.artifact.detection
+$schema: https://cytomine.com/schema-store/tasks/task.v0.json
+authors:
+  - first_name: Marina
+    last_name: D'Amato
+    organization: Radboudumc
+    email: marina.damato@radboudumc.nl
+    is_contact: true
+
+configuration:
+  input_folder: /home/user/data/images
+  output_folder: /home/user/output
+  image:
+    file: /image.tar
+
+inputs:
+  tumor:
+    display_name: wsi
+    type: wsi
+    description: Input wsi
+
+outputs:
+  output_scores:
+    display_name: Scores
+    type: file
+    description: Output scores
+  tumor_artifacts:
+    display_name: Artifact masks
+    type: wsi
+    description: Output artifact masks
+  tumor_tissue:
+    display_name: Tissue masks
+    type: wsi
+    description: Output tissue masks
